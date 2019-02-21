@@ -303,6 +303,11 @@ class Env:
         gamepad = pygame.display.set_mode((pad_width, pad_height))
         pygame.display.set_caption('Tetris_Test')
 
+        ### BGM ###
+        pygame.mixer.music.load('sounds/bgm.mp3')
+        pygame.mixer.music.set_volume(0.1)
+        pygame.mixer.music.play(-1)
+
         explosion_sound = pygame.mixer.Sound('sounds/explosion.wav')
         background = pygame.image.load('images/background.jpg')
         clock = pygame.time.Clock()
